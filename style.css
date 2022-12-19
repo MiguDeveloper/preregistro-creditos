@@ -1,0 +1,356 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+:root {
+  --color-primary: #cfe214;
+  --color-secondary: #177467;
+  --color-font: #4a4a49;
+  --color-required-error: #b85252;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+ul,
+ol {
+  padding: 0 !important;
+}
+
+body {
+  height: 100%;
+  color: --var(--color-font);
+}
+@media (min-width: 48rem) {
+  body {
+    background: linear-gradient(90deg, white 50%, var(--color-primary) 50%);
+  }
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label.error {
+  color: var(--color-required-error);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+input.error,
+select.error {
+  border-color: var(--color-required-error);
+}
+
+form,
+img {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.form-label.form-label--xs {
+  margin-bottom: 0.1rem;
+  color: var(--color-font);
+}
+
+.btn-submit {
+  border-radius: 17px;
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  max-width: 200px !important;
+  padding: 7px 0;
+  font-weight: bold;
+  position: relative;
+  transition: 0.5s;
+}
+.btn-submit--confirm {
+  padding: 7px 2rem;
+  opacity: 0.8;
+}
+.btn-submit--confirm:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.btn-submit--hover:after {
+  content: "🎓";
+  position: absolute;
+  opacity: 0;
+  top: 6px;
+  right: -20px;
+  transition: 0.5s;
+}
+.btn-submit--hover:hover {
+  padding-right: 24px;
+  padding-left: 8px;
+}
+.btn-submit--hover:hover:after {
+  opacity: 1;
+  right: 16px;
+}
+
+select.form-select {
+  color: var(--color-font);
+}
+
+.formgroup__terms {
+  text-align: justify;
+  font-size: 11px;
+  margin-bottom: 0;
+}
+.formgroup__terms a {
+  color: var(--color-secondary);
+  cursor: pointer;
+}
+
+.msg-reject {
+  border-left: 11px solid #f8485e;
+  padding: 1em calc(1.5em + 0.5vw);
+  color: #424242;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 1.05em;
+  line-height: 1.65em;
+  letter-spacing: 0;
+  border-radius: 11px;
+  background: linear-gradient(to bottom right, rgba(245, 242, 240, 0.8901960784) 0, #fff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-right {
+  background: var(--color-primary);
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.content-logo-estudios {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+@media (min-width: 36rem) {
+  .content-logo-estudios {
+    align-items: flex-end;
+    margin-right: 5rem;
+  }
+}
+@media (min-width: 48rem) {
+  .content-logo-estudios {
+    margin-right: 0;
+  }
+}
+
+.logo-estudios {
+  max-height: 150px;
+  object-fit: cover;
+}
+@media (min-width: 48rem) {
+  .logo-estudios {
+    margin: 0 14px 0 0;
+    height: 273px;
+  }
+}
+@media (min-width: 62rem) {
+  .logo-estudios {
+    margin: 0 70px 0 0;
+    height: 273px;
+  }
+}
+
+@media (min-width: 48rem) {
+  .text-content {
+    align-items: flex-end;
+  }
+}
+@media (min-width: 48rem) {
+  .text-content__image {
+    margin: 0 150px 0 0;
+  }
+}
+
+.title-h1,
+.title-h2 {
+  font-weight: bold;
+  color: var(--color-secondary);
+  text-align: center;
+}
+
+.title-h1 {
+  font-size: 35px;
+  z-index: 2;
+}
+
+.title-h2 {
+  font-size: 30px;
+  margin-top: 2rem;
+  max-width: 512px;
+  z-index: 2;
+}
+
+@media (min-width: 36rem) {
+  .clipPath {
+    position: absolute;
+    height: 100%;
+    width: 273px;
+    background: white;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 19% 100%, 0% 100%);
+  }
+}
+
+.arrows {
+  opacity: 0;
+}
+@media (min-width: 36rem) {
+  .arrows {
+    opacity: 1;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    background-image: url("img/1x/hero-arrows.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    top: 3%;
+    left: 10%;
+  }
+}
+
+.students {
+  position: absolute;
+  height: 27%;
+  background-size: contain;
+  background-image: url("img/1x/hero-img--persons.png");
+  background-repeat: no-repeat;
+  bottom: 2%;
+  width: 216px;
+}
+@media (min-width: 48rem) {
+  .students {
+    height: 34%;
+    background-size: contain;
+    bottom: 1%;
+  }
+}
+@media (min-width: 62rem) {
+  .students {
+    width: 234px;
+    background-size: contain;
+    bottom: 19%;
+  }
+}
+@media (min-width: 75rem) {
+  .students {
+    width: 330px;
+    height: 50%;
+    background-size: contain;
+    bottom: 11%;
+  }
+}
+
+.circulo {
+  height: 296px;
+  width: 228px;
+  position: absolute;
+  bottom: 17%;
+  right: -124px;
+  background-image: url("img/1x/hero-circle.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+
+.logo-ipfe {
+  width: 192px;
+  height: 57px;
+  position: absolute;
+  bottom: 16%;
+  background-image: url("img/svg/logo-ipfe.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 9%;
+}
+@media (min-width: 36rem) {
+  .logo-ipfe {
+    width: 240px;
+    height: 72px;
+  }
+}
+@media (min-width: 48rem) {
+  .logo-ipfe {
+    width: 185px;
+    height: 55px;
+  }
+}
+@media (min-width: 62rem) {
+  .logo-ipfe {
+    width: 293px;
+    height: 88px;
+  }
+}
+
+.position-relative {
+  z-index: 1;
+}
+
+.swal2-title {
+  font-size: 1.5rem !important;
+}
+
+.swal2-html-container p,
+.swal2-html-container h3 {
+  text-align: justify;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.swal2-html-container .lista {
+  font-size: 0.9rem;
+  text-align: justify;
+  margin-left: 33px;
+}
+
+.swal2-html-container .lista li {
+  margin-bottom: 1rem;
+}
+.swal2-html-container .lista li > ul {
+  margin-left: 21px;
+  margin-top: 8px;
+}
+.swal2-html-container .lista li > ul li {
+  margin-bottom: 3px;
+}
+
+.listDecimal {
+  list-style: decimal;
+}
+
+.listRoman {
+  list-style: upper-roman;
+}
+
+.listAlpha {
+  list-style-type: upper-alpha;
+}
+
+.title--color-secondary {
+  color: var(--color-secondary) !important;
+}
+
+/*# sourceMappingURL=style.css.map */
