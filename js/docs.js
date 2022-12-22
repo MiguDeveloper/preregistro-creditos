@@ -26,7 +26,7 @@ const TERMINOSCONDICIONES = `
         El responsable del pago y aval deberán presentar documentación debidamente escaneada que sustente sus ingresos y continuidad laboral para el proceso de evaluación crediticia con la finalidad de evaluar si cumplen o no con el ratio de endeudamiento:
         <ul class="listAlpha">
             <li>
-                De acuerdo con las políticas de crédito establecen que la capacidad endeudamiento no debe exceder del 30%.
+                De acuerdo con las políticas de crédito establecen que la capacidad endeudamiento no debe exceder del 35%.
             </li>
         </ul>
         <br>
@@ -115,3 +115,26 @@ En el <b>INSTITUTO PERUANO DE FOMENTO EDUCATIVO</b> nos preocupamos por la prote
 </ul>
 
 `;
+
+const NIVEL_ACADEMICO = {
+  tecnico: "tecnico",
+  universitario: "universitario",
+};
+
+const listNivelAcademico = [
+  { value: NIVEL_ACADEMICO.tecnico },
+  { value: NIVEL_ACADEMICO.universitario },
+];
+
+const ciclos = [
+  { nivel: NIVEL_ACADEMICO.tecnico, value: "3 ciclo" },
+  { nivel: NIVEL_ACADEMICO.tecnico, value: "4 ciclo" },
+  { nivel: NIVEL_ACADEMICO.tecnico, value: "5 ciclo" },
+  { nivel: NIVEL_ACADEMICO.tecnico, value: "6 ciclo" },
+  { nivel: NIVEL_ACADEMICO.universitario, value: "5 ciclo" },
+  { nivel: NIVEL_ACADEMICO.universitario, value: "6 ciclo" },
+  { nivel: NIVEL_ACADEMICO.universitario, value: "7 ciclo" },
+  { nivel: NIVEL_ACADEMICO.universitario, value: "8 ciclo" },
+  { nivel: NIVEL_ACADEMICO.universitario, value: "9 ciclo" },
+  { nivel: NIVEL_ACADEMICO.universitario, value: "10 ciclo" },
+];

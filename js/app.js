@@ -2,6 +2,8 @@ $(document).ready(function () {
   initAllowReject();
   initSurvey();
   initDatePicker();
+  initNivelAcademico();
+  changeNivelAcademico();
 
   $.validator.addMethod(
     "emailfull",
@@ -168,6 +170,9 @@ const initRules = () => {
     fNacimiento: {
       required: true,
     },
+    sexo: {
+      required: true,
+    },
     email: {
       required: true,
       emailfull: true,
@@ -223,6 +228,9 @@ const initMessages = () => {
     fNacimiento: {
       required: CAMPO_REQUERIDO,
     },
+    sexo: {
+      required: CAMPO_REQUERIDO,
+    },
     email: {
       required: CAMPO_REQUERIDO,
       email: "Formato correo invalido",
@@ -254,4 +262,35 @@ const initMessages = () => {
   };
 
   return MESSAGES;
+};
+
+const initNivelAcademico = () => {
+  listNivelAcademico.forEach((nivel) => {
+    $("#nivelAcademico").append(
+      `<option value="${nivel.value}">${nivel.value}</option>`
+    );
+  });
+};
+
+const changeNivelAcademico = () => {
+  $("#nivelAcademico").change(function () {
+    const NIVEL = this.value;
+    addOption(NIVEL);
+  });
+};
+
+const addOption = (nivel = "") => {
+  $("#cicloAContinuar")
+    .find("option")
+    .remove()
+    .end()
+    .append(`<option value="">Seleccione</option>`);
+
+  ciclos.forEach((ciclo) => {
+    if (ciclo.nivel === nivel) {
+      $("#cicloAContinuar").append(
+        `<option value="${ciclo.value}">${ciclo.value}</option>`
+      );
+    }
+  });
 };
