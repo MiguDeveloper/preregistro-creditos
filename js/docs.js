@@ -117,8 +117,8 @@ En el <b>INSTITUTO PERUANO DE FOMENTO EDUCATIVO</b> nos preocupamos por la prote
 `;
 
 const NIVEL_ACADEMICO = {
-  tecnico: "tecnico",
-  universitario: "universitario",
+  tecnico: "Técnico",
+  universitario: "Universitario",
 };
 
 const listNivelAcademico = [

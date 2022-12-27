@@ -55,10 +55,16 @@
 }
 
 .title-h2 {
-  font-size: 30px;
+  font-size: 25px;
   margin-top: 2rem;
+  margin-bottom: 1rem;
   max-width: 512px;
+  line-height: 1;
   z-index: 2;
+
+  @include breakpoint-up(small) {
+    margin-bottom: 2rem;
+  }
 }
 
 .clipPath {
@@ -90,18 +96,20 @@
 
 .students {
   position: absolute;
-  height: 27%;
+  height: 13%;
   background-size: contain;
   background-image: url("img/1x/hero-img--persons.png");
   background-repeat: no-repeat;
   bottom: 2%;
-  width: 216px;
+  width: 94px;
 
   @include breakpoint-up(small) {
+    height: 27%;
+    width: 216px;
   }
 
   @include breakpoint-up(medium) {
-    height: 34%;
+    height: 24%;
     background-size: contain;
     bottom: 1%;
   }
@@ -109,14 +117,14 @@
   @include breakpoint-up(large) {
     width: 234px;
     background-size: contain;
-    bottom: 19%;
+    bottom: 7%;
   }
 
   @include breakpoint-up(xlarge) {
     width: 330px;
-    height: 50%;
+    height: 40%;
     background-size: contain;
-    bottom: 11%;
+    bottom: 7%;
   }
 }
 
@@ -135,12 +143,12 @@
 .logo-ipfe {
   width: 192px;
   height: 57px;
-  position: absolute;
-  bottom: 16%;
+  //position: absolute;
   background-image: url("img/svg/logo-ipfe.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  right: 9%;
+  margin-bottom: 1rem;
+  align-self: flex-end;
 
   @include breakpoint-up(small) {
     width: 240px;

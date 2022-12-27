@@ -197,10 +197,17 @@ select.form-select {
 }
 
 .title-h2 {
-  font-size: 30px;
+  font-size: 25px;
   margin-top: 2rem;
+  margin-bottom: 1rem;
   max-width: 512px;
+  line-height: 1;
   z-index: 2;
+}
+@media (min-width: 36rem) {
+  .title-h2 {
+    margin-bottom: 2rem;
+  }
 }
 
 @media (min-width: 36rem) {
@@ -234,16 +241,22 @@ select.form-select {
 
 .students {
   position: absolute;
-  height: 27%;
+  height: 13%;
   background-size: contain;
   background-image: url("img/1x/hero-img--persons.png");
   background-repeat: no-repeat;
   bottom: 2%;
-  width: 216px;
+  width: 94px;
+}
+@media (min-width: 36rem) {
+  .students {
+    height: 27%;
+    width: 216px;
+  }
 }
 @media (min-width: 48rem) {
   .students {
-    height: 34%;
+    height: 24%;
     background-size: contain;
     bottom: 1%;
   }
@@ -252,15 +265,15 @@ select.form-select {
   .students {
     width: 234px;
     background-size: contain;
-    bottom: 19%;
+    bottom: 7%;
   }
 }
 @media (min-width: 75rem) {
   .students {
     width: 330px;
-    height: 50%;
+    height: 40%;
     background-size: contain;
-    bottom: 11%;
+    bottom: 7%;
   }
 }
 
@@ -279,12 +292,11 @@ select.form-select {
 .logo-ipfe {
   width: 192px;
   height: 57px;
-  position: absolute;
-  bottom: 16%;
   background-image: url("img/svg/logo-ipfe.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  right: 9%;
+  margin-bottom: 1rem;
+  align-self: flex-end;
 }
 @media (min-width: 36rem) {
   .logo-ipfe {
