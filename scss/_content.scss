@@ -5,8 +5,9 @@
 }
 
 .content-logo-estudios {
-  margin-top: 5rem;
+  margin-top: 9rem;
   margin-bottom: 5rem;
+
   @include breakpoint-up(small) {
     align-items: flex-end;
     margin-right: 5rem;
@@ -20,13 +21,15 @@
 .logo-estudios {
   max-height: 150px;
   object-fit: cover;
+  height: 273px;
   @include breakpoint-up(medium) {
     margin: 0 14px 0 0;
-    height: 273px;
   }
   @include breakpoint-up(large) {
     margin: 0 70px 0 0;
-    height: 273px;
+  }
+  @include breakpoint-up(xlarge) {
+    margin: 0 150px 0 0;
   }
 }
 
@@ -77,6 +80,14 @@
     left: 0;
     clip-path: polygon(0 0, 100% 0, 19% 100%, 0% 100%);
   }
+
+  @include breakpoint-up(medium) {
+    clip-path: polygon(0 0, 36% 0, 19% 100%, 0% 100%);
+  }
+
+  @include breakpoint-up(large) {
+    clip-path: polygon(0 0, 100% 0, 19% 100%, 0% 100%);
+  }
 }
 
 .arrows {
@@ -109,7 +120,7 @@
   }
 
   @include breakpoint-up(medium) {
-    height: 24%;
+    height: 15%;
     background-size: contain;
     bottom: 1%;
   }
@@ -117,14 +128,14 @@
   @include breakpoint-up(large) {
     width: 234px;
     background-size: contain;
-    bottom: 7%;
+    bottom: 2%;
   }
 
   @include breakpoint-up(xlarge) {
-    width: 330px;
-    height: 40%;
+    width: 255px;
+    height: 32%;
     background-size: contain;
-    bottom: 7%;
+    bottom: 0%;
   }
 }
 

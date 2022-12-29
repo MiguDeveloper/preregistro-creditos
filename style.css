@@ -141,7 +141,7 @@ select.form-select {
 }
 
 .content-logo-estudios {
-  margin-top: 5rem;
+  margin-top: 9rem;
   margin-bottom: 5rem;
 }
 @media (min-width: 36rem) {
@@ -159,17 +159,21 @@ select.form-select {
 .logo-estudios {
   max-height: 150px;
   object-fit: cover;
+  height: 273px;
 }
 @media (min-width: 48rem) {
   .logo-estudios {
     margin: 0 14px 0 0;
-    height: 273px;
   }
 }
 @media (min-width: 62rem) {
   .logo-estudios {
     margin: 0 70px 0 0;
-    height: 273px;
+  }
+}
+@media (min-width: 75rem) {
+  .logo-estudios {
+    margin: 0 150px 0 0;
   }
 }
 
@@ -221,6 +225,16 @@ select.form-select {
     clip-path: polygon(0 0, 100% 0, 19% 100%, 0% 100%);
   }
 }
+@media (min-width: 48rem) {
+  .clipPath {
+    clip-path: polygon(0 0, 36% 0, 19% 100%, 0% 100%);
+  }
+}
+@media (min-width: 62rem) {
+  .clipPath {
+    clip-path: polygon(0 0, 100% 0, 19% 100%, 0% 100%);
+  }
+}
 
 .arrows {
   opacity: 0;
@@ -256,7 +270,7 @@ select.form-select {
 }
 @media (min-width: 48rem) {
   .students {
-    height: 24%;
+    height: 15%;
     background-size: contain;
     bottom: 1%;
   }
@@ -265,15 +279,15 @@ select.form-select {
   .students {
     width: 234px;
     background-size: contain;
-    bottom: 7%;
+    bottom: 2%;
   }
 }
 @media (min-width: 75rem) {
   .students {
-    width: 330px;
-    height: 40%;
+    width: 255px;
+    height: 32%;
     background-size: contain;
-    bottom: 7%;
+    bottom: 0%;
   }
 }
 

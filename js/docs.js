@@ -30,7 +30,7 @@ const TERMINOSCONDICIONES = `
             </li>
         </ul>
         <br>
-        Los postulantes declaran y aceptan que el pago por costo de carpeta al Programa de Créditos “Continuidad de Estudios” no garantiza que obtengan los puntajes requeridos en el proceso de evaluación.
+        Los postulantes declaran y aceptan que el pago por costo de carpeta al Programa de Créditos “Continuidad de Estudios” no garantiza que obtengan los puntajes requeridos en el proceso de evaluación, el mismo que no es reembolsable.
     </li>
 
     <li>El postulante pasará por una entrevista como parte del proceso de evaluación socioeconómica para la determinación de la tasa de interés, el cual será entre 10% y 15%.</li>
