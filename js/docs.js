@@ -1,14 +1,14 @@
 const TITULO_TERMINOS =
-  "Programa de Créditos Educativos “Continuidad de Estudios”: Términos y Condiciones 2023";
+  'Programa de Créditos Educativos “Continuidad de Estudios”: Términos y Condiciones 2023';
 const TITULO_POLITICAS =
-  "Programa de Créditos Educativos “Continuidad de Estudios”: Política de tratamientos de datos personales";
+  'Programa de Créditos Educativos “Continuidad de Estudios”: Política de tratamientos de datos personales';
 const TERMINOSCONDICIONES = `
 <ul class="lista listDecimal">
     <li>
         Los postulantes deberán cumplir con los siguientes requisitos para aplicar al Programa de Créditos Educativos “Continuidad de Estudios”:
         <ul class="listRoman">
             <li>Ser de nacionalidad peruana y residente permanente.</li>
-            <li>Tener una edad entre los dieciocho (18) y veinticinco (25) años cumplidos a la fecha en la que apliquen al Programa de Créditos Educativos “Continuidad de Estudios”.</li>
+            <li>Tener una edad entre los dieciocho (18) y treinta (30) años cumplidos a la fecha en la que apliquen al Programa de Créditos Educativos “Continuidad de Estudios”.</li>
             <li>Encontrarse a mitad de carrera universitaria o técnica en adelante.</li>
             <li>Los postulantes deben presentar excelencia académica presentando récord de notas o documento análogo, que acrediten de manera fehaciente que en los últimos dos (2) ciclos obtuvieron un promedio ponderado mayor o igual a 13/20.</li>
             <li>Haber dejado de estudiar máximo un (1) ciclo de estudio por problemas económicos.</li>
@@ -16,7 +16,7 @@ const TERMINOSCONDICIONES = `
             <li>No tener antecedentes penales, policiales o judiciales, por parte del estudiante, responsable del pago y aval del crédito educativo.</li>
             <li>Presentar un buen registro histórico en la central de riesgo, por parte del estudiante, responsable del pago y aval del crédito educativo.</li>
             <li>Sustentar continuidad laboral por parte del responsable del pago y aval del crédito educativo.</li>
-            <li>Cancelar el importe de ciento cincuenta (150) soles por derecho a evaluación.</li>
+            <li>Cancelar el importe de S/ 100.00 (Cien y 00/100 soles) por derecho a evaluación.</li>
         </ul>
         <br>
         El incumplimiento de los requisitos anteriores podrá dar lugar al retiro del postulante del proceso de evaluación al Programa de Créditos “Continuidad de Estudios”.
@@ -117,8 +117,8 @@ En el <b>INSTITUTO PERUANO DE FOMENTO EDUCATIVO</b> nos preocupamos por la prote
 `;
 
 const NIVEL_ACADEMICO = {
-  tecnico: "Técnico",
-  universitario: "Universitario",
+  tecnico: 'Técnico',
+  universitario: 'Universitario',
 };
 
 const listNivelAcademico = [
@@ -127,14 +127,14 @@ const listNivelAcademico = [
 ];
 
 const ciclos = [
-  { nivel: NIVEL_ACADEMICO.tecnico, value: "3 ciclo" },
-  { nivel: NIVEL_ACADEMICO.tecnico, value: "4 ciclo" },
-  { nivel: NIVEL_ACADEMICO.tecnico, value: "5 ciclo" },
-  { nivel: NIVEL_ACADEMICO.tecnico, value: "6 ciclo" },
-  { nivel: NIVEL_ACADEMICO.universitario, value: "5 ciclo" },
-  { nivel: NIVEL_ACADEMICO.universitario, value: "6 ciclo" },
-  { nivel: NIVEL_ACADEMICO.universitario, value: "7 ciclo" },
-  { nivel: NIVEL_ACADEMICO.universitario, value: "8 ciclo" },
-  { nivel: NIVEL_ACADEMICO.universitario, value: "9 ciclo" },
-  { nivel: NIVEL_ACADEMICO.universitario, value: "10 ciclo" },
+  { nivel: NIVEL_ACADEMICO.tecnico, value: '3 ciclo' },
+  { nivel: NIVEL_ACADEMICO.tecnico, value: '4 ciclo' },
+  { nivel: NIVEL_ACADEMICO.tecnico, value: '5 ciclo' },
+  { nivel: NIVEL_ACADEMICO.tecnico, value: '6 ciclo' },
+  { nivel: NIVEL_ACADEMICO.universitario, value: '5 ciclo' },
+  { nivel: NIVEL_ACADEMICO.universitario, value: '6 ciclo' },
+  { nivel: NIVEL_ACADEMICO.universitario, value: '7 ciclo' },
+  { nivel: NIVEL_ACADEMICO.universitario, value: '8 ciclo' },
+  { nivel: NIVEL_ACADEMICO.universitario, value: '9 ciclo' },
+  { nivel: NIVEL_ACADEMICO.universitario, value: '10 ciclo' },
 ];

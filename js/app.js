@@ -6,62 +6,62 @@ $(document).ready(function () {
   changeNivelAcademico();
 
   $.validator.addMethod(
-    "emailfull",
+    'emailfull',
     function (value, element) {
       return (
         this.optional(element) ||
         /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(value)
       );
     },
-    "Formato correo no valido"
+    'Formato correo no valido'
   );
 
-  $("#frmRegistro").validate({
-    ignore: "",
+  $('#frmRegistro').validate({
+    ignore: '',
     rules: initRules(),
     messages: initMessages(),
     submitHandler: function (form, event) {
       event.preventDefault();
-      const data = $("#frmRegistro").serializeArray();
+      const data = $('#frmRegistro').serializeArray();
       console.log(data);
       Swal.fire({
-        icon: "success",
-        title: "¡Te registraste con éxito!",
-        text: "En un plazo de 48 horas te enviaremos un correo de confirmación con los requisitos del programa.",
-        confirmButtonText: "Listo!",
+        icon: 'success',
+        title: '¡Te registraste con éxito!',
+        text: 'En un plazo de 48 horas te enviaremos un correo de confirmación con los requisitos del programa.',
+        confirmButtonText: 'Listo!',
         customClass: {
-          confirmButton: "btn-submit btn-submit--confirm",
+          confirmButton: 'btn-submit btn-submit--confirm',
         },
         buttonsStyling: false,
       });
     },
     invalidHandler: function (event, validator) {
-      console.log("fomulario invalido: campos requeridos");
+      console.log('fomulario invalido: campos requeridos');
       event.preventDefault();
     },
   });
 
-  $(".showmodalTerms").click(function (evt) {
+  $('.showmodalTerms').click(function (evt) {
     Swal.fire({
       title: TITULO_TERMINOS,
       html: TERMINOSCONDICIONES,
-      confirmButtonText: "Aceptar",
+      confirmButtonText: 'Aceptar',
       customClass: {
-        title: "title--color-secondary",
-        confirmButton: "btn-submit btn-submit--confirm",
+        title: 'title--color-secondary',
+        confirmButton: 'btn-submit btn-submit--confirm',
       },
       buttonsStyling: false,
     });
   });
 
-  $(".showModalPolitics").click(function (evt) {
+  $('.showModalPolitics').click(function (evt) {
     Swal.fire({
       title: TITULO_POLITICAS,
       html: POLITICASDATOS,
-      confirmButtonText: "Aceptar",
+      confirmButtonText: 'Aceptar',
       customClass: {
-        title: "title--color-secondary",
-        confirmButton: "btn-submit btn-submit--confirm",
+        title: 'title--color-secondary',
+        confirmButton: 'btn-submit btn-submit--confirm',
       },
       buttonsStyling: false,
     });
@@ -69,72 +69,72 @@ $(document).ready(function () {
 });
 
 const initSurvey = () => {
-  $("#showOtro").hide();
-  $("#comoSeEntero").change(function () {
+  $('#showOtro').hide();
+  $('#comoSeEntero').change(function () {
     const MEDIO = this.value;
-    if ("otros" === MEDIO) {
-      $("#showOtro").show("slow");
+    if ('otros' === MEDIO) {
+      $('#showOtro').show('slow');
     } else {
-      $("#otros").val("");
-      $("#showOtro").hide("slow");
+      $('#otros').val('');
+      $('#showOtro').hide('slow');
     }
   });
 };
 const initAllowReject = () => {
-  $("#show-allow").hide();
-  $("#reject").hide();
+  $('#show-allow').hide();
+  $('#reject').hide();
 };
 
 const initDatePicker = () => {
-  $("#fNacimiento").datepicker({
-    dateFormat: "dd/mm/yy",
+  $('#fNacimiento').datepicker({
+    dateFormat: 'dd/mm/yy',
     changeMonth: true,
     changeYear: true,
-    yearRange: "-45:+0",
+    yearRange: '-45:+0',
     dayNames: [
-      "Domingo",
-      "Lunes",
-      "Martes",
-      "Miercoles",
-      "Jueves",
-      "Viernes",
-      "Sabado",
+      'Domingo',
+      'Lunes',
+      'Martes',
+      'Miercoles',
+      'Jueves',
+      'Viernes',
+      'Sabado',
     ],
-    dayNamesMin: ["Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab"],
+    dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
     firstDay: 1,
     gotoCurrent: true,
     monthNamesShort: [
-      "Ene",
-      "Feb",
-      "Mar",
-      "Abr",
-      "May",
-      "Jun",
-      "Jul",
-      "Ago",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dic",
+      'Ene',
+      'Feb',
+      'Mar',
+      'Abr',
+      'May',
+      'Jun',
+      'Jul',
+      'Ago',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dic',
     ],
     monthNames: [
-      "Enero",
-      "Febrero",
-      "Marzo",
-      "Abril",
-      "Mayo",
-      "Junio",
-      "Julio",
-      "Agosto",
-      "Septiembre",
-      "Octubre",
-      "Noviembre",
-      "Deciembre",
+      'Enero',
+      'Febrero',
+      'Marzo',
+      'Abril',
+      'Mayo',
+      'Junio',
+      'Julio',
+      'Agosto',
+      'Septiembre',
+      'Octubre',
+      'Noviembre',
+      'Deciembre',
     ],
     onSelect: function () {
-      let date = $(this).datepicker("getDate");
+      let date = $(this).datepicker('getDate');
       const dateFormatISO = new Date(date).toISOString();
-      const arrayDate = dateFormatISO.split("T")[0].split("-");
+      const arrayDate = dateFormatISO.split('T')[0].split('-');
       const currentDate = new Date();
       let edad = currentDate.getFullYear() - +arrayDate[0];
       const month = currentDate.getMonth() + 1 - arrayDate[1];
@@ -144,14 +144,14 @@ const initDatePicker = () => {
       }
       console.log(edad);
 
-      if (edad < 18 || edad > 25) {
-        $("#show-allow").hide();
-        $("#reject").show("slow");
+      if (edad < 18 || edad > 30) {
+        $('#show-allow').hide();
+        $('#reject').show('slow');
         return;
       }
 
-      $("#reject").hide("slow");
-      $("#show-allow").show("slow");
+      $('#reject').hide('slow');
+      $('#show-allow').show('slow');
     },
   });
 };
@@ -198,7 +198,7 @@ const initRules = () => {
     otros: {
       required: {
         depends: function () {
-          if ($("#comoSeEntero").val() === "otros") {
+          if ($('#comoSeEntero').val() === 'otros') {
             return true;
           }
           return false;
@@ -214,16 +214,16 @@ const initRules = () => {
 };
 
 const initMessages = () => {
-  const CAMPO_REQUERIDO = "Campo requerido";
+  const CAMPO_REQUERIDO = 'Campo requerido';
   const MESSAGES = {
     nombres: {
       required: CAMPO_REQUERIDO,
     },
     dni: {
       required: CAMPO_REQUERIDO,
-      number: "Solo digitos númericos",
-      minlength: "Mínimo 8 digitos",
-      maxlength: "Máximo 8 digitos",
+      number: 'Solo digitos númericos',
+      minlength: 'Mínimo 8 digitos',
+      maxlength: 'Máximo 8 digitos',
     },
     fNacimiento: {
       required: CAMPO_REQUERIDO,
@@ -233,7 +233,7 @@ const initMessages = () => {
     },
     email: {
       required: CAMPO_REQUERIDO,
-      email: "Formato correo invalido",
+      email: 'Formato correo invalido',
     },
     tieneCreditoAnterior: {
       required: CAMPO_REQUERIDO,
@@ -257,7 +257,7 @@ const initMessages = () => {
       required: CAMPO_REQUERIDO,
     },
     terminos: {
-      required: "Requerido",
+      required: 'Requerido',
     },
   };
 
@@ -266,29 +266,29 @@ const initMessages = () => {
 
 const initNivelAcademico = () => {
   listNivelAcademico.forEach((nivel) => {
-    $("#nivelAcademico").append(
+    $('#nivelAcademico').append(
       `<option value="${nivel.value}">${nivel.value}</option>`
     );
   });
 };
 
 const changeNivelAcademico = () => {
-  $("#nivelAcademico").change(function () {
+  $('#nivelAcademico').change(function () {
     const NIVEL = this.value;
     addOption(NIVEL);
   });
 };
 
-const addOption = (nivel = "") => {
-  $("#cicloAContinuar")
-    .find("option")
+const addOption = (nivel = '') => {
+  $('#cicloAContinuar')
+    .find('option')
     .remove()
     .end()
     .append(`<option value="">Seleccione</option>`);
 
   ciclos.forEach((ciclo) => {
     if (ciclo.nivel === nivel) {
-      $("#cicloAContinuar").append(
+      $('#cicloAContinuar').append(
         `<option value="${ciclo.value}">${ciclo.value}</option>`
       );
     }
